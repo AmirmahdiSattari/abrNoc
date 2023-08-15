@@ -11,7 +11,11 @@ import Rocky from '../../assets/Rocky.png';
 import Ubuntu from '../../assets/Ubuntu.png';
 import WOS from '../../assets/WOS.png';
 
+import { useUpdateContext } from '../../context/update';
+
 const OperatingSystem = () => {
+
+  const { updateComponetn } = useUpdateContext();
 
   let osData = [
     {
@@ -70,10 +74,10 @@ const OperatingSystem = () => {
 
         {osData.map((data, index) => (
           <OPSContainer
-           name={data.name} logo={data.logo} data={operatingSystem}
+            name={data.name} logo={data.logo} data={operatingSystem}
             key={index} id={data.id}
             isSelected={selectedDiv === index + 1}
-            onClick={() => handleDivSelection(index + 1)} 
+            onClick={() => handleDivSelection(index + 1)}
           />
         ))}
 

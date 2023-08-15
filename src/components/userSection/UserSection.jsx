@@ -1,12 +1,18 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import { FaCircleUser } from "react-icons/fa6";
 import { AiOutlineBell } from "react-icons/ai";
 
 const UserSection = () => {
 
+  // useEffect(() => {
+  //   axios('https://assignment.abrnoc.com/user-info').then((res) => {
+  //     console.log(res)
+  //   })
+  // }, [])
 
-  const moeneyAmount = 125.25;
+
+
   return (
     <div className='w-[25%] 
     flex justify-center items-center
@@ -25,7 +31,7 @@ const UserSection = () => {
       border border-[#BDBDBD] rounded-md
       py-1 '>
         <span className='text-[#757575] pl-3'>+</span>
-        <span className='pl-2 pr-8 text-[#2F3857]'>$ {moeneyAmount}</span>
+        <span className='pl-2 pr-8 text-[#2F3857]'>$ 125.00</span>
       </div>
 
       <div className='
